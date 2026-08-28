@@ -8,6 +8,7 @@ $offset = (int)$http->getVariable( 'offset', 0 );
 $action = trim( $http->getVariable( 'action', '' ) );
 $selectedNodeId = (int)$http->getVariable( 'selected_node_id', 0 );
 $returnUri = trim( $http->getVariable( 'return_uri', '' ) );
+$field = trim( $http->getVariable( 'field', '' ) );
 $limit = 25;
 
 // No class filter here. The content browser should show all content by default.
@@ -25,14 +26,30 @@ if ( $action === 'select' && $selectedNodeId > 0 )
         if ( $returnUri !== '' )
         {
             $returnUri = str_replace( '&amp;', '&', $returnUri );
-            return eZHTTPTool::redirect(
-                $returnUri,
-                array(
-                    'selected_node_id' => $selectedItem['node_id'],
-                    'selected_object_id' => $selectedItem['object_id'],
-                    'selected_name' => $selectedItem['name'],
-                )
+
+            if ( $returnUri === 'js' )
+            {
+                $tpl = eZTemplate::factory();
+                $tpl->setVariable( 'selected_item', $selectedItem );
+                $tpl->setVariable( 'field', $field );
+
+                $Result = array();
+                $Result['content'] = $tpl->fetch( 'design:explayouts_content_browser_ui/js_callback.tpl' );
+                return $Result;
+            }
+
+            $queryParams = array(
+                'selected_node_id' => $selectedItem['node_id'],
+                'selected_object_id' => $selectedItem['object_id'],
+                'selected_name' => $selectedItem['name'],
             );
+            if ( $field !== '' )
+                $queryParams['field'] = $field;
+
+            $separator = strpos( $returnUri, '?' ) === false ? '?' : '&';
+            $redirectUrl = $returnUri . $separator . http_build_query( $queryParams );
+
+            return $module->redirectTo( $redirectUrl );
         }
     }
 }
