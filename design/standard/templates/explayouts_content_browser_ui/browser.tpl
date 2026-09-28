@@ -19,7 +19,7 @@
                 <h3>{'Selected item'|i18n( 'explayouts_content_browser_ui/browser' )}</h3>
                 <p>
                     <strong>{$selected_item.name|wash}</strong>
-                    (Node: {$selected_item.node_id}, Object: {$selected_item.object_id})
+                    {'(Node: %node_id, Object: %object_id)'|i18n( 'explayouts_content_browser_ui/browser',, hash( '%node_id', $selected_item.node_id, '%object_id', $selected_item.object_id ) )}
                 </p>
             </div>
         {else}
@@ -49,7 +49,7 @@
         <p>{'Search:'|i18n( 'explayouts_content_browser_ui/browser' )} {$search|wash}</p>
     {/if}
 
-    <p>{'Showing'|i18n( 'explayouts_content_browser_ui/browser' )} {$items|count()} {'of'|i18n( 'explayouts_content_browser_ui/browser' )} {$total} {'items'|i18n( 'explayouts_content_browser_ui/browser' )}</p>
+    <p>{'Showing %count of %total items'|i18n( 'explayouts_content_browser_ui/browser',, hash( '%count', $items|count(), '%total', $total ) )}</p>
 
     <table class="list" cellspacing="0">
         <thead>
