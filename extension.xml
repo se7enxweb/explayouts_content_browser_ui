@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requires="ezpublish 6.0">
-  <name>explayouts_content_browser_ui</name>
+  <name>Exponential Layouts Content Browser UI</name>
   <summary>Server-rendered content browser UI for Exponential Layouts on Exponential Legacy / Exponential 6, replacing the React content-browser-ui package</summary>
   <version>1.0.3</version>
   <copyright>7x</copyright>

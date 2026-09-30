@@ -13,7 +13,7 @@ class explayouts_content_browser_uiInfo
 {
     public static function info()
     {
-        return array( 'Name' => "explayouts_content_browser_ui",
+        return array( 'Name' => "Exponential Layouts Content Browser UI",
                       'Version' => "1.0.3",
                       'Copyright' => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
