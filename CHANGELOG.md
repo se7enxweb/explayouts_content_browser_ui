@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.15 (2026-10-29)
+
+- Updated: One copyright notice, Exponential Foundation and 7x.
+
 ## 1.0.14 (2026-10-28)
 
 - Added: Translations into 59 more languages: aka-GH, arc-IQ, asm-IN, aze-AZ, bel-BY, bho-IN, bod-CN, ceb-PH, che-RU,
