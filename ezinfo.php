@@ -1,7 +1,7 @@
 <?php
 //
 // explayouts_content_browser_ui - Server-rendered content browser UI for Exponential Layouts on Exponential Legacy / Exponential 6
-// Copyright (C) 1998 - 2026 7x. All rights reserved.
+// Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ class explayouts_content_browser_uiInfo
     {
         return array( 'Name' => "Exponential Layouts Content Browser UI",
                       'Version' => "1.0.14",
-                      'Copyright' => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
+                      'Copyright' => "Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
                       'Info_url' => "https://github.com/se7enxweb/explayouts_content_browser_ui" );
     }
