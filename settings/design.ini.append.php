@@ -2,3 +2,4 @@
 
 [ExtensionSettings]
 DesignExtensions[]=explayouts_content_browser_ui
+*/ ?>
