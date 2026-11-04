@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.16 (2026-11-03)
+
+- Updated: Every settings file closes its PHP comment, so php -l passes on PHP 8.0 and later and a direct request no longer answers with a server error.
+
 ## 1.0.15 (2026-10-29)
 
 - Updated: One copyright notice, Exponential Foundation and 7x.
