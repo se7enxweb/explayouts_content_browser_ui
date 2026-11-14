@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.17 (2026-11-14)
+
+- Fixed: The settings files close their PHP comment, so they are valid PHP (from Marco-JAC's pull request #11; the change itself shipped in the previous release).
+- Updated: README and INSTALL name PHP 8.0 as the lowest PHP, as composer.json does.
+
 ## 1.0.16 (2026-11-03)
 
 - Updated: Every settings file closes its PHP comment, so php -l passes on PHP 8.0 and later and a direct request no longer answers with a server error.
